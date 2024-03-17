@@ -2,11 +2,11 @@
   "name": "desafio-aws-app",
   "version": "1.0.0",
   "description": "Descrição do seu projeto",
-  "main": "index.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.529.1",
