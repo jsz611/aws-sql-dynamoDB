@@ -12,3 +12,6 @@
 ## E executar os teste 
 ### *node test/test-script.js*
 
+## As rotas local 
+### POST - Para inseir transação  *http://localhost:3000/api/transaction*
+### GET - Para Buscar todas as transações *http://localhost:3000/api/transactions*
