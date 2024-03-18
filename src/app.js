@@ -3,10 +3,10 @@ import dotenv from "dotenv";
 import transactionsRouter from "./api/transactions.js";
 import cors from "cors";
 
+const app = express();
 app.use(cors());
 dotenv.config();
 
-const app = express();
 app.use(express.json());
 
 app.use("/transaction", transactionsRouter);
