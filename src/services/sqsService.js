@@ -3,11 +3,12 @@ import { SQSClient, SendMessageCommand } from "@aws-sdk/client-sqs";
 const sqsClient = new SQSClient({ region: process.env.AWS_REGION });
 
 export async function sendMessage({ idempotencyId, amount, type }) {
-  // Garantindo que idempotencyId seja uma string válida
-  const deduplicationId = `${idempotencyId}`; // Convertendo para string
+  const deduplicationId = `${idempotencyId}`;
 
-  // Verificando se deduplicationId atende aos requisitos
-  if (!deduplicationId.match(/^[a-zA-Z0-9!-*. '_()]*$/) || deduplicationId.length > 128) {
+  if (
+    !deduplicationId.match(/^[a-zA-Z0-9!-*. '_()]*$/) ||
+    deduplicationId.length > 128
+  ) {
     throw new Error("MessageDeduplicationId é inválido.");
   }
 
