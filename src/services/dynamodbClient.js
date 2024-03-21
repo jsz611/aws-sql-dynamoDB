@@ -25,4 +25,4 @@ async function fetchAllTransactions() {
   }
 }
 
-export { docClient as db, tableName as Table, fetchAllTransactions };
+export { docClient, tableName, fetchAllTransactions };
